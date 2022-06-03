@@ -2,11 +2,19 @@ import React from "react"
 import Logo from "../../static/assets/logo_gatsyby.png"
 import { IoIosMenu, IoIosClose } from "react-icons/io"
 
-const MobileNav = () => {
+const MobileNav = props => {
   return (
-    <div className=" h-full bg-white flex flex-col w-60 ml-auto px-16 text-center text-xl font-bold text-blue-500 z-50">
-      <div className=" ml-28 ">
-        <IoIosClose className="" size={"3em"} color={"gray"} />
+    <div className=" h-full bg-white flex flex-col w-60 ml-auto px-16 text-center text-xl font-semibold text-blue-500 z-50">
+      <div className="ml-28 mt-7">
+        <IoIosClose
+          className=""
+          size={"3em"}
+          fontSize={"15px"}
+          color={"gray"}
+          onClick={() => {
+            props.setOpen(!props.open)
+          }}
+        />
       </div>
 
       <a href="/" className="py-2">
@@ -34,10 +42,11 @@ function Navbar() {
   const [open, setOpen] = React.useState(false)
   return (
     <nav className="fixed h-20 w-full">
-      <div className=" flex flex-row justify-between mx-14 items-center h-full md:mx-24">
+      <div className=" flex flex-row justify-between mx-5 items-center h-full md:mx-24">
         <div className="w-32 ">
           <img src={Logo} alt="logo" />
         </div>
+        {/* Desktop navigation */}
         <div className="hidden text-blue-700 font-semibold md:block">
           <a href="/" className="px-3">
             Roadmap
@@ -62,11 +71,18 @@ function Navbar() {
       </div>
       {/* mobile navigation */}
       <div
-        className={`fixed w-full h-full top-0 left-0 bg-black bg-opacity-80 z-40 ${
-          open ? "translate-x-0 block" : "translate-x-56 hidden"
+        className={`fixed bg-black w-full h-full top-0 bg-opacity-50 md:hidden ${
+          open ? "block" : "hidden"
+        }`}
+      ></div>
+      <div
+        className={`fixed w-full h-full top-0 left-0 z-40 md:hidden ${
+          open
+            ? "transition-all duration-700 transform translate-x-0"
+            : "transition-all duration-700 transform translate-x-full"
         }`}
       >
-        <MobileNav />
+        <MobileNav open={open} setOpen={setOpen} />
       </div>
     </nav>
   )
