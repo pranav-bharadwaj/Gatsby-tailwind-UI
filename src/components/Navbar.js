@@ -7,7 +7,6 @@ const MobileNav = props => {
     <div className=" h-full bg-white flex flex-col w-60 ml-auto px-16 text-center text-xl font-semibold text-blue-500 z-50">
       <div className="ml-28 mt-7">
         <IoIosClose
-          className=""
           size={"3em"}
           fontSize={"15px"}
           color={"gray"}
@@ -41,7 +40,7 @@ const MobileNav = props => {
 function Navbar() {
   const [open, setOpen] = React.useState(false)
   return (
-    <nav className="fixed h-20 w-full">
+    <nav className="fixed h-20 bg-white w-full bg-fixed my-0 ">
       <div className=" flex flex-row justify-between mx-5 items-center h-full md:mx-24">
         <div className="w-32 ">
           <img src={Logo} alt="logo" />
