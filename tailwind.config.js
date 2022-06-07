@@ -9,6 +9,7 @@ module.exports = {
         bgColorOne: "#F3F8FF",
         HeadlineFirstSection: "#071e4b",
         headlineTextText: "#6129FF",
+        sliderColor: "#F3F8FF",
       },
     },
   },

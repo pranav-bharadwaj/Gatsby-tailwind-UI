@@ -40,7 +40,7 @@ const MobileNav = props => {
 function Navbar() {
   const [open, setOpen] = React.useState(false)
   return (
-    <nav className="fixed h-20 bg-white w-full bg-fixed my-0 ">
+    <nav className="fixed h-20 bg-white w-full bg-fixed my-0 z-50">
       <div className=" flex flex-row justify-between mx-5 items-center h-full md:mx-24">
         <div className="w-32 ">
           <img src={Logo} alt="logo" />

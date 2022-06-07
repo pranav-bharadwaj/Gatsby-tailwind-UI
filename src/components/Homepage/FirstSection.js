@@ -8,7 +8,7 @@ import FirstSectionrixer from "../../../static/assets/firstsection-rizek.svg"
 import { IoIosPlayCircle } from "react-icons/io"
 function FirstSection() {
   return (
-    <div className="flex flex-col justify-around items-center bg-bgColorOne">
+    <div className="flex flex-col justify-around items-center bg-bgColorOne ">
       <div className="mt-28 font-semibold text-[28px] md:text-[64px] text-center md:w-full xl:w-4/6 lg:w-3/4 sm:w-full xs:w-1/2 ">
         <h3 className="text-HeadlineFirstSection">
           Design business workflows <br />
@@ -36,33 +36,26 @@ function FirstSection() {
       <div className="mt-11 aspect-auto w-5/6 md:w-4/6">
         <img src={FirstSectionMain} alt="firstsection_features" />
       </div>
-      <div className="mt-28 text-center md:w-3/4 text-HeadlineFirstSection">
+      <div className="mt-14 w-10/12 md:mt-36 text-center md:w-3/4 text-HeadlineFirstSection">
         <h2 className="font-semibold text-2xl md:text-4xl ">
           Join 100+ companies using Breakout to automate processes.
         </h2>
       </div>
-      <div className="flex relative items-center justify-around w-3/4 ">
-        <div>
-          <img
-            src={FirstSectionNetmed}
-            alt="netmeds"
-            className="w-28 grow-1 "
-          />
+      <div className="flex flex-wrap items-center justify-between w-7/12 h-48 md:h-full opacity-40 md:w-8/12  md:opacity-80 mb-32 md:mt-10">
+        <div className="w-1/2 md:w-1/6">
+          <img src={FirstSectionNetmed} alt="netmeds" />
         </div>
-        <div>
-          {" "}
-          <img src={FirstSectionSdi} alt="sdi" className="w-16" />
+        <div className="w-1/3 md:w-14">
+          <img src={FirstSectionSdi} alt="sdi" />
         </div>
-        <div>
-          {" "}
-          <img src={FirstSectionrecruite} alt="recurite" className="w-36" />
+        <div className="w-7/12 md:w-1/5">
+          <img src={FirstSectionrecruite} alt="recurite" />
         </div>
-        <div>
-          {" "}
-          <img src={FirstSectionapplesmp} alt="applesimp" className="w-32" />
+        <div className="w-1/3 md:w-1/5">
+          <img src={FirstSectionapplesmp} alt="applesimp" />
         </div>
-        <div>
-          <img src={FirstSectionrixer} alt="rixer" className="w-28" />
+        <div className="w-1/2 ml-16 md:ml-0 md:w-1/6 ">
+          <img src={FirstSectionrixer} alt="rixer" />
         </div>
       </div>
     </div>
