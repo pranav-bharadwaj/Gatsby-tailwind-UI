@@ -77,18 +77,21 @@ export default function SecondSection() {
         <SectionLayout
           featureName={featureName[0]}
           information={diffFeatures[0]}
+          reverseCol={false}
         />
       </div>
       <div className="w-full  md:w-10/12 md:ml-0">
         <SectionLayout
           featureName={featureName[1]}
           information={diffFeatures[1]}
+          reverseCol={true}
         />
       </div>
       <div className="w-full  md:w-10/12 md:ml-0">
         <SectionLayout
           featureName={featureName[2]}
           information={diffFeatures[2]}
+          reverseCol={false}
         />
       </div>
     </div>
